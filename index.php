@@ -24,7 +24,6 @@
     echo            "<li><a href='' >réalisations</a></li>";
     echo            "<li><a href='' >services</a></li>";
     echo            "<li><a href=''>contact</a></li>";
-    echo            "<li><a class='' href=''></a></li>";
     echo        "</ul>";
     echo    "</nav>";
     echo "</header>";
