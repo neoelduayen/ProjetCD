@@ -10,17 +10,8 @@
     $query = "SELECT * FROM $nomtable";
     $result= mysqli_query($link,$query);
     while ($donnees=mysqli_fetch_assoc($result)) {
-        $ch1=$donnees["ID"];
-        $ch2=$donnees["Titre"];
-        $ch3=$donnees["Auteur"];
-        print "$ch1, ";
-        print "$ch2, ";
-        print "$ch3, ";
+        echo '<h1>$donnees["Titre"]</h1>';
+        echo '<h1>$donnees["Auteur"]</h1>';
+        echo '<br />';
     }
-    echo '<form action="login.php" method="post">';
-    echo 'Votre login : <input type="text" name="login">';
-    echo '<br />';
-    echo 'Votre mot de passe : <input type="password" name="pwd"><br />';
-    echo '<input type="submit" value="Connexion">';
-    echo '</form>'
 ?>
