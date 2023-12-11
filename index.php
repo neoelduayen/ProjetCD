@@ -10,8 +10,8 @@
     $query = "SELECT * FROM $nomtable";
     $result= mysqli_query($link,$query);
     while ($donnees=mysqli_fetch_assoc($result)) {
-        echo '<h1>$donnees["Titre"]</h1>';
-        echo '<h1>$donnees["Auteur"]</h1>';
+        echo "<h1> $donnees['Titre'] </h1>";
+        echo "<h2> $donnees['Auteur'] </h2>";
         echo '<br />';
     }
 ?>
