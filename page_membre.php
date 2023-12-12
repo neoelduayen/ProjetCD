@@ -9,7 +9,8 @@ echo '<html>';
 echo '<head>';
 echo '<title>Back-office</title>';
 echo '</head>';
-
+echo '<h1>Bienvenue sur votre session.</h1>';
+echo 'Liste des albums disponible sur le site : <br />';
 $bdd= "nelduayen_bd"; // Base de données
 $host= "lakartxela.iutbayonne.univ-pau.fr";
 $user= "nelduayen_bd"; // Utilisateur
@@ -19,16 +20,17 @@ $nomtable= "ProjetCD"; /* Connection bdd */
 $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de
 données");
 $query = "SELECT * FROM $nomtable";
-    $result= mysqli_query($link,$query);
-    while ($donnees=mysqli_fetch_assoc($result)) {
-        $ch1=$donnees["ID"];
-        $ch2=$donnees["Titre"];
-        $ch3=$donnees["Prix"];
-        echo "<p>$ch1, $ch2, $ch3 €</p>";
+$result= mysqli_query($link,$query);
+while ($donnees=mysqli_fetch_assoc($result)) {
+    $ch1=$donnees["ID"];
+    $ch2=$donnees["Titre"];
+    $ch3=$donnees["Prix"];
+    echo "<form action='retire_cd.php' method='post'><p>$ch1, $ch2, $ch3\n€ <input type='submit' value='-' name='test'><input type='hidden' name='IdAlbum' value='$ch1'></form>";
     }
+echo '<br />';
 echo '<body>';
 // echo 'Votre login est '.$_SESSION['login'].' et votre mot de passe est '.$_SESSION['pwd'].'.';
-echo 'Bienvenue sur votre session.';
+
 echo '<br />';
 echo'<form action="ajout_cd.php" method="post">';
 echo 'Titre : <input type="text" name="Titre"><br />';

@@ -6,7 +6,7 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $auteur = $_POST['Auteur'];
         $genre = $_POST['Genre'];
         $prix = $_POST['Prix'];
-        $image = strtolower($titre);
+        $image = $titre;
 
         $bdd= "nelduayen_bd"; // Base de données
         $host= "lakartxela.iutbayonne.univ-pau.fr";
