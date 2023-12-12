@@ -16,7 +16,7 @@
     echo            "<li>";
     echo                "<a>";
     echo                    "<picture>";
-    echo                        "<img src='images/logo.avif' alt='' />";
+    echo                        "<img src='images/logo.png' alt='' />";
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
