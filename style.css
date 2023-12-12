@@ -10,7 +10,9 @@ header {
         justify-content: space-evenly ;
         color: black;
         list-style-type: none;
-        line-height: 64px;
+        align-items: center ;
+        margin: 0;
+        padding: 0;
 
         li {
             color: black;
@@ -22,7 +24,6 @@ header {
                 img {
                     border-radius: 50%;
                     height: 54px;
-                    line-height: 64px;
                 }
             }
         }
