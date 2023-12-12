@@ -1,9 +1,11 @@
 header {
     height: 60px;
     background-color: aquamarine;
+    text-decoration: none;
 
     ul {
         display: flex;
+        flex-wrap: nowrap; 
         justify-content: center ;
         align-content: stretch ;
         color: black;
@@ -11,7 +13,7 @@ header {
         li {
             color: black;
             font-size: 0.85rem;
-            
+
             a {
                 line-height: 72px;
             }
