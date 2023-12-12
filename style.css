@@ -1,0 +1,29 @@
+header {
+    height: 60px;
+    background-color: aquamarine;
+
+    ul {
+        display: flex;
+        justify-content: center ;
+        align-content: stretch ;
+        color: black;
+
+        li {
+            color: black;
+            font-size: 0.85rem;
+
+
+            &.logo {
+
+                img {
+                    height: 113px;
+                    width: 120px;
+                }
+            }
+
+            a {
+                line-height: 72px;
+            }
+        }
+    }
+}
