@@ -25,7 +25,7 @@ while ($donnees=mysqli_fetch_assoc($result)) {
     $ch1=$donnees["ID"];
     $ch2=$donnees["Titre"];
     $ch3=$donnees["Prix"];
-    echo "<form action='retire_cd.php' method='post'><p>$ch1, $ch2, $ch3\n€ <input type='submit' value='-' name='test'><input type='hidden' name='IdAlbum' value='$ch1'></form>";
+    echo "<form action='retire_cd.php' method='post'><p>$ch1, $ch2, $ch3\n€ <input type='submit' value='-' name='test'><input type='hidden' name='IdAlbum' value='$ch1'><input type='hidden' name='Image' value='$ch2'></form>";
     }
 echo '<br />';
 echo '<body>';
