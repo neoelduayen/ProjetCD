@@ -16,7 +16,7 @@
     echo            "<li>";
     echo                "<a>";
     echo                    "<picture>";
-    echo                        "<img src='images/logo.png' alt='' />";
+    echo                        "<img src='images/logo.png' href:'index.php' alt='' />";
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
@@ -33,9 +33,12 @@
     $query = "SELECT * FROM $nomtable";
     $result= mysqli_query($link,$query);
     while ($donnees=mysqli_fetch_assoc($result)) {
-        $ch1=$donnees["ID"];
+        $ch1=$donnees["Image"];
         $ch2=$donnees["Titre"];
         $ch3=$donnees["Auteur"];
+        echo "<picture>";
+        echo    "<img src='$ch1' alt='' />";
+        echo "</picture>";
         echo "<h1> $ch2 </h1>";
         echo "<h2> $ch3 </h2>";
         echo '<br />';
