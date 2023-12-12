@@ -6,7 +6,7 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $auteur = $_POST['Auteur'];
         $genre = $_POST['Genre'];
         $prix = $_POST['Prix'];
-        $image = $titre;
+        $emp_image = $titre;
 
         $bdd= "nelduayen_bd"; // Base de données
         $host= "lakartxela.iutbayonne.univ-pau.fr";
@@ -20,10 +20,13 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $row = mysqli_fetch_array($result);
         $id=$row['nb'];
         $id += 1;
-        $sql = "INSERT INTO ProjetCD (ID, Titre, Auteur, Genre, Prix, Image) VALUES ($id,'$titre','$auteur','$genre',$prix,'vignettes/$image.jpg')";
+        $sql = "INSERT INTO ProjetCD (ID, Titre, Auteur, Genre, Prix, Image) VALUES ($id,'$titre','$auteur','$genre',$prix,'vignettes/$emp_image.jpg')";
         if (mysqli_query($link, $sql)) {
-            echo '<body onLoad="alert(\'CD ajouté à la base de données\')">';
-            echo '<meta http-equiv="refresh" content="0;URL=page_membre.php">';
+            /*echo '<body onLoad="alert(\'CD ajouté à la base de données\')">';
+            echo '<meta http-equiv="refresh" content="0;URL=page_membre.php">';*/
+            $fic = $_FILES["image"]['tmp_name'];
+            $nom = $titre;
+            move_uploaded_file($fic,"./vignettes/$nom.jpg");
         }
         else {
             echo '<body onLoad="alert(\'Des données saisies sont invalides\')">';

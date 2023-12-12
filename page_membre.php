@@ -32,11 +32,12 @@ echo '<body>';
 // echo 'Votre login est '.$_SESSION['login'].' et votre mot de passe est '.$_SESSION['pwd'].'.';
 
 echo '<br />';
-echo'<form action="ajout_cd.php" method="post">';
+echo'<form ENCTYPE="multipart/form-data" action="ajout_cd.php" method="post">';
 echo 'Titre : <input type="text" name="Titre"><br />';
 echo 'Auteur : <input type="text" name="Auteur"><br />';
 echo 'Genre : <input type="text" name="Genre"><br />';
-echo 'Prix : <input type="text" name="Prix">';
+echo 'Prix : <input type="text" name="Prix"><br />';
+echo 'Image : <input type="file" name="image"/><br />';
 echo '<input type="submit" value="Ajouter"></form>';
 // On affiche un lien pour fermer notre session
 echo '<a href="./logout.php">Déconnexion</a>';
