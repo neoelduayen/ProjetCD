@@ -12,11 +12,11 @@
     echo "<body>";
     echo "<header>";
     echo    "<nav>";
-    echo        "<ul class=''>";
-    echo            "<li class=''>";
-    echo                "<a href=''>";
-    echo                    "<picture class=''>";
-    echo                        "<img src='' alt='' />";
+    echo        "<ul>";
+    echo            "<li>";
+    echo                "<a>";
+    echo                    "<picture>";
+    echo                        "<img src='images/logo.avif' alt='' />";
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
