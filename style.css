@@ -1,20 +1,21 @@
 header {
     height: 60px;
+    width: 100%;
     background-color: aquamarine;
-    list-style-type: none;
+    
 
     ul {
         display: flex;
         flex-wrap: nowrap; 
         justify-content: space-evenly ;
         color: black;
+        list-style-type: none;
 
         li {
             color: black;
             font-size: 0.85rem;
 
             a {
-                line-height: 72px;
                 text-decoration: none;
             }
         }
