@@ -1,18 +1,18 @@
 header {
     height: 60px;
     background-color: aquamarine;
-    text-decoration: none;
 
     ul {
         display: flex;
         flex-wrap: nowrap; 
         justify-content: center ;
-        align-content: stretch ;
+        justify-content: space-evenly ;
         color: black;
 
         li {
             color: black;
             font-size: 0.85rem;
+            text-decoration: none;
 
             a {
                 line-height: 72px;
