@@ -16,7 +16,7 @@
     echo            "<li>";
     echo                "<a>";
     echo                    "<picture>";
-    echo                        "<img src='images/logo.png' href:'index.php' alt='' />";
+    echo                        "<img src='images/logo.png' href='index.php' alt='' />";
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
