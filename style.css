@@ -1,21 +1,21 @@
 header {
     height: 60px;
     background-color: aquamarine;
+    list-style-type: none;
 
     ul {
         display: flex;
         flex-wrap: nowrap; 
-        justify-content: center ;
         justify-content: space-evenly ;
         color: black;
 
         li {
             color: black;
             font-size: 0.85rem;
-            text-decoration: none;
 
             a {
                 line-height: 72px;
+                text-decoration: none;
             }
         }
     }
