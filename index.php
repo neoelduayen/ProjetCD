@@ -14,9 +14,9 @@
     echo    "<nav>";
     echo        "<ul>";
     echo            "<li>";
-    echo                "<a>";
+    echo                "<a href='index.php' >";
     echo                    "<picture>";
-    echo                        "<img src='images/logo.png' href='index.php' alt='' />";
+    echo                        "<img src='images/logo.png' alt='' />";
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
