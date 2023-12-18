@@ -22,11 +22,11 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $id += 1;
         $sql = "INSERT INTO ProjetCD (ID, Titre, Auteur, Genre, Prix, Image) VALUES ($id,'$titre','$auteur','$genre',$prix,'vignettes/$emp_image.jpg')";
         if (mysqli_query($link, $sql)) {
-            /*echo '<body onLoad="alert(\'CD ajouté à la base de données\')">';
-            echo '<meta http-equiv="refresh" content="0;URL=page_membre.php">';*/
             $fic = $_FILES["image"]['tmp_name'];
             $nom = $titre;
             move_uploaded_file($fic,"./vignettes/$nom.jpg");
+            echo '<body onLoad="alert(\'CD ajouté à la base de données\')">';
+            echo '<meta http-equiv="refresh" content="0;URL=page_membre.php">';
         }
         else {
             echo '<body onLoad="alert(\'Des données saisies sont invalides\')">';

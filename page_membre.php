@@ -9,8 +9,29 @@ echo '<html>';
 echo '<head>';
 echo '<title>Back-office</title>';
 echo '</head>';
+echo "<head>";
+echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
+echo "</head>";
+echo "<body>";
+    echo "<header>";
+    echo    "<nav>";
+    echo        "<ul>";
+    echo            "<li>";
+    echo                "<a href='index.php' >";
+    echo                    "<picture>";
+    echo                        "<img src='images/logo.png' alt='' />";
+    echo                    "</picture>";
+    echo                "</a>";
+    echo            "</li>";
+    echo            "<li><a href='' >Panier</a></li>";
+    echo            "<li><a href='' >réalisations</a></li>";
+    echo            "<li><a href='' >services</a></li>";
+    echo            "<li><a href=''>contact</a></li>";
+    echo        "</ul>";
+    echo    "</nav>";
+    echo "</header>";
 echo '<h1>Bienvenue sur votre session.</h1>';
-echo 'Liste des albums disponible sur le site : <br />';
+echo '<h2>Liste des albums disponible sur le site : </h2>';
 $bdd= "nelduayen_bd"; // Base de données
 $host= "lakartxela.iutbayonne.univ-pau.fr";
 $user= "nelduayen_bd"; // Utilisateur
@@ -27,11 +48,10 @@ while ($donnees=mysqli_fetch_assoc($result)) {
     $ch3=$donnees["Prix"];
     echo "<form action='retire_cd.php' method='post'><p>$ch1, $ch2, $ch3\n€ <input type='submit' value='-' name='test'><input type='hidden' name='IdAlbum' value='$ch1'><input type='hidden' name='Image' value='$ch2'></form>";
     }
-echo '<br />';
 echo '<body>';
 // echo 'Votre login est '.$_SESSION['login'].' et votre mot de passe est '.$_SESSION['pwd'].'.';
 
-echo '<br />';
+echo "<h2>Formulaire d'ajout de CD : </h2>";
 echo'<form ENCTYPE="multipart/form-data" action="ajout_cd.php" method="post">';
 echo 'Titre : <input type="text" name="Titre"><br />';
 echo 'Auteur : <input type="text" name="Auteur"><br />';
