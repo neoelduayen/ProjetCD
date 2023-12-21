@@ -1,35 +1,98 @@
-header {
-    height: 64px;
+body{
+	header {
+    height: 96px;
     width: 100%;
     background-color: aquamarine;
     
+		nav{
 
-    ul {
-        display: flex;
-        flex-wrap: nowrap; 
-        justify-content: space-evenly ;
-        color: black;
-        list-style-type: none;
-        align-items: center ;
-        height: 100% ;
-        margin: 0;
-        padding: 0;
+			height: 86px;
+			ul {
+				display: flex;
+				flex-wrap: nowrap; 
+				justify-content: space-between;
+				padding: 5px 15px;
+				color: black;
+				list-style-type: none;
+				align-items: center ;
+				margin: 0;
+				height: 100%;
+				
+				li {
+					color: black;
 
-        li {
-            color: black;
+					a {
+						text-decoration: none;
 
-            a {
-                text-decoration: none;
+						img {
+							border-radius: 50%;
+							height: 86px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	margin: 0;
+	
+	h1, h2, p{
+		margin: 0;
+	}
+	
+	.slogan{
+		padding: 30px 20px 50px;
+	}
+	
+	.main-content{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 20px;
+    
+		.mesCD{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap; 
+			max-width: 1200px; 
+			justify-content: flex-start;
+			align-items: center;
+			gap:10px;
+			
 
-                img {
-                    border-radius: 50%;
-                    height: 56px;
-                }
-            }
-        }
-    }
-}
-
-body{
-    margin: 0;
+			.unCD{
+				display: inline-flex;
+				flex-direction: column;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				border: 1px solid black;
+				border-radius: 5%;
+				max-width: calc(1200px/4);
+				width: calc(1200px/4 - 20px);
+				max-height: calc(1200px/3);
+				height: calc(1200px/3);
+				padding: 5px;
+				
+				
+				img {
+					border-radius: 50%;
+					height: 206px;
+				}
+				
+				.chanteur{
+					font-size: 1.2em;
+				}
+				
+				.shop{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 50px;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
 }

@@ -20,10 +20,8 @@
     echo                    "</picture>";
     echo                "</a>";
     echo            "</li>";
+    echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
     echo            "<li><a href='' >Panier</a></li>";
-    echo            "<li><a href='' >réalisations</a></li>";
-    echo            "<li><a href='' >services</a></li>";
-    echo            "<li><a href=''>contact</a></li>";
     echo        "</ul>";
     echo    "</nav>";
     echo "</header>";
@@ -32,16 +30,29 @@
     données");
     $query = "SELECT * FROM $nomtable";
     $result= mysqli_query($link,$query);
+	
+	echo "<h2 class='slogan'>Vous rêvez de ce CD ? N'hésitez plus ...</h2>";
+    echo "<div class='main-content'>";
+	echo "<div class='mesCD'>";
     while ($donnees=mysqli_fetch_assoc($result)) {
         $ch1=$donnees["Image"];
         $ch2=$donnees["Titre"];
         $ch3=$donnees["Auteur"];
-        echo "<picture>";
-        echo    "<img src='$ch1' alt='' />";
-        echo "</picture>";
-        echo "<h1> $ch2 </h1>";
-        echo "<h2> $ch3 </h2>";
-        echo '<br />';
+		$ch4=$donnees["Prix"];
+		echo "<div class='unCD'>";
+        echo 	"<picture>";
+        echo   		"<img src='$ch1' alt='' />";
+        echo 	"</picture>";
+        echo 	"<h1> $ch2 </h1>";
+        echo 	"<p class='chanteur'> $ch3 </p>";
+		echo    	"<div class='shop'>";
+		echo 			"<p> Prix : $ch4 € </p>";
+		echo 			"<button> Acheter </button>";
+		echo    	"</div>";
+        echo 	"<br />";
+		echo "</div>";
     }
-    echo "</body>"
+	echo "</div>";
+    echo "</div>";
+    echo "</body>";
 ?>
