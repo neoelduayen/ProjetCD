@@ -43,14 +43,14 @@
         $ch2 = $donnees["Titre"];
         $ch3 = $donnees["Auteur"];
         $id = $donnees["ID"];
-
+    
         echo "<form method='post' action=''>"; 
         echo    "<input type='hidden' name='action' value='ajouter'>";
         echo    "<input type='hidden' name='id' value='$id'>";
         echo    "<picture>";
         echo        "<img src='$ch1' alt='' />";
         echo    "</picture>";
-        echo    "<h1>$ch2</h1>";
+        echo    "<h1><a href='selection_cd.php?id=$id'>$ch2</a></h1>";
         echo    "<h2>$ch3</h2>";
         echo    "<label for='quantite'>Quantité :</label>";
         echo    "<input type='number' name='quantite' value='1' min='1'>";
@@ -70,3 +70,4 @@
 
     echo "</body>";
 ?>
+
