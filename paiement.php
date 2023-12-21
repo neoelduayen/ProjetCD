@@ -1,4 +1,26 @@
 <?php
+echo "<head>";
+echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
+echo "</head>";
+
+echo "<body>";
+echo "<header>";
+echo    "<nav>";
+echo        "<ul>";
+echo            "<li>";
+echo                "<a href='index.php' >";
+echo                    "<picture>";
+echo                        "<img src='images/logo.png' alt='' />";
+echo                    "</picture>";
+echo                "</a>";
+echo            "</li>";
+
+echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
+echo            "<li><a href='panier.php' >Panier</a></li>";
+
+echo        "</ul>";
+echo    "</nav>";
+echo "</header>";
 
 function simulerPaiement($numeroCarte, $dateValidite) {
     // Vérifier la longueur des numéros de carte

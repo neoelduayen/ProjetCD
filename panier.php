@@ -8,27 +8,27 @@ $pass = "nelduayen_bd"; // Mot de passe
 $nomtable = "ProjetCD"; /* Table bdd */
 
 echo "<head>";
-echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
-echo "</head>";
+    echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
+    echo "</head>";
 
-echo "<body>";
-echo "<header>";
-echo    "<nav>";
-echo        "<ul>";
-echo            "<li>";
-echo                "<a href='index.php' >";
-echo                    "<picture>";
-echo                        "<img src='images/logo.png' alt='' />";
-echo                    "</picture>";
-echo                "</a>";
-echo            "</li>";
-echo            "<li><a href='panier.php'>Panier</a></li>";
-echo            "<li><a href='realisations.php'>Réalisations</a></li>";
-echo            "<li><a href='services.php'>Services</a></li>";
-echo            "<li><a href='contact.php'>Contact</a></li>";
-echo        "</ul>";
-echo    "</nav>";
-echo "</header>";
+    echo "<body>";
+    echo "<header>";
+    echo    "<nav>";
+    echo        "<ul>";
+    echo            "<li>";
+    echo                "<a href='index.php' >";
+    echo                    "<picture>";
+    echo                        "<img src='images/logo.png' alt='' />";
+    echo                    "</picture>";
+    echo                "</a>";
+    echo            "</li>";
+
+    echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
+    echo            "<li><a href='' >Panier</a></li>";
+
+    echo        "</ul>";
+    echo    "</nav>";
+    echo "</header>";
 
 if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
     echo "<h1>Votre Panier</h1>";
