@@ -1,13 +1,13 @@
 <?php
-session_start();
+	session_start();
 
-$bdd = "nelduayen_bd";
-$host = "lakartxela.iutbayonne.univ-pau.fr";
-$user = "nelduayen_bd";
-$pass = "nelduayen_bd";
-$nomtable = "ProjetCD";
+	$bdd = "nelduayen_bd";
+	$host = "lakartxela.iutbayonne.univ-pau.fr";
+	$user = "nelduayen_bd";
+	$pass = "nelduayen_bd";
+	$nomtable = "ProjetCD";
 
-echo "<head>";
+	echo "<head>";
     echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
     echo "</head>";
 
@@ -41,24 +41,24 @@ if (isset($_GET['id'])) {
         $ch2 = $donnees["Titre"];
         $ch3 = $donnees["Auteur"];
         $ch4 = $donnees["Genre"];
+		$ch5 = $donnees["Prix"];
         $id = $donnees["ID"];
 
         echo "<form method='post' action=''>";
         echo    "<input type='hidden' name='action' value='ajouter'>";
         echo    "<input type='hidden' name='id' value='$id'>";
-		echo "<div class='unCD'>";
+		echo "<div class='monCD'>";
         echo 	"<picture>";
         echo   		"<img src='$ch1' alt='' />";
         echo 	"</picture>";
-        echo 	"<h1><a href='selection_cd.php?id=$id'>$ch2</a></h1>";
-        echo 	"<p class='chanteur'> $ch3 </p>";
-		echo    	"<div class='shop'>";
-		echo 			"<p> Prix : $ch4 € </p>";
-		echo            "<input type='submit' value='Acheter'>";
-        echo            "</form>";
-        echo '<br />';
-		echo    	"</div>";
-        echo 	"<br />";
+		echo 	"<div class='description'>";
+        echo 		"<p> Titre : </p>";
+        echo 		"<h1><a href='selection_cd.php?id=$id'>$ch2</a></h1>";
+        echo 		"<p> Auteur : $ch3 </p>";
+		echo 		"<p> Genre : $ch4 </p>";
+		echo    	"<p> Prix : $ch5 € </p>";
+		echo     	"<input type='submit' value='Acheter'>";
+		echo 	"</div>";
 		echo "</div>";
     } else {
         echo "CD non trouvé";

@@ -1,4 +1,7 @@
 body{
+	text-decoration:none
+	margin: 0;
+	
 	header {
     height: 96px;
     width: 100%;
@@ -34,11 +37,11 @@ body{
 		}
 	}
 	
-	margin: 0;
-	
 	h1, h2, p{
 		margin: 0;
 	}
+	
+	// Page d'accueil 
 	
 	.slogan{
 		padding: 30px 20px 50px;
@@ -94,5 +97,18 @@ body{
 				}
 			}
 		}
+	}
+	
+	// Page de description d'un CD sélectionné
+	
+	.monCD{
+		display : flex;
+		flex-direction: column;
+		
+		img {
+			border-radius: 50%;
+			height: 800px;
+		}
+		
 	}
 }
