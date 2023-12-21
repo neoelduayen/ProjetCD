@@ -30,20 +30,17 @@ echo        "</ul>";
 echo    "</nav>";
 echo "</header>";
 
-// Affichage du panier
 if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
     echo "<h1>Votre Panier</h1>";
 
-    // Se connecter à la base de données
     $link = mysqli_connect($host, $user, $pass, $bdd) or die("Impossible de se connecter à la base de données");
 
-    // Récupérer les informations sur les CDs dans le panier
-    $panierIds = array_unique($_SESSION['panier']); // Pour éviter les doublons
+    
+    $panierIds = array_unique($_SESSION['panier']);
     $inClause = implode(',', $panierIds);
     $query = "SELECT * FROM $nomtable WHERE ID IN ($inClause)";
     $result = mysqli_query($link, $query);
 
-    // Afficher les CDs dans le panier
     $totalPrix = 0;
     while ($donnees = mysqli_fetch_assoc($result)) {
         $id = $donnees["ID"];
@@ -71,13 +68,10 @@ if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
         echo "</div>";
     }
 
-    
-    // Afficher le prix total
     echo "<div class='total-panier'>";
     echo    "<p>Prix total: $totalPrix €</p>";
     echo "</div>";
 
-    // Bouton pour aller vers la page de paiement
     echo "<form method='get' action='paiement.php'>";
     echo    "<input type='submit' value='Aller vers le paiement'>";
     echo "</form>";
@@ -86,7 +80,6 @@ else {
     echo "<p>Votre panier est vide.</p>";
 }
 
-// Gestion de la suppression du panier
 if (isset($_POST['action']) && $_POST['action'] == "supprimer") {
     $id = $_POST['id'];
     $_SESSION['panier'] = array_diff($_SESSION['panier'], array($id));
