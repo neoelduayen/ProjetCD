@@ -15,8 +15,8 @@ header ('location: page_membre.php');
 }
 else {
 echo '<body onLoad="alert(\'Membre non reconnu...\')">';
-// puis on le redirige vers la page d'accueil
-echo '<meta http-equiv="refresh" content="0;URL=index.php">';
+// puis on le redirige vers la page de connexion
+echo '<meta http-equiv="refresh" content="0;URL=connexion.html">';
 }
 } else {
 echo 'Les variables du formulaire ne sont pas déclarées.';
