@@ -1,10 +1,37 @@
-<html> <head> <title>Formulaire d'identification</title> </head>
-    <body>
-        <form action="login.php" method="post">
+<html>
+
+<head>
+    <title>Formulaire d'identification</title>
+    <link rel='stylesheet' type='text/css' href='style.css' media='screen' />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href='index.php'>
+                        <picture>
+                            <img src='images/logo.png' alt='' />
+                        </picture>
+                    </a>
+                </li>
+
+                <li>
+                    <h1>Bienvenue au MELOSHOP</h1>
+                </li>
+                <li><a href='panier.php'>Panier</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+        <form action="login.php" method="post" class="connexion">
             Votre login : <input type="text" name="login">
             <br />
             Votre mot de passe : <input type="password" name="pwd"><br />
             <input type="submit" value="Connexion">
         </form>
     </body>
+
 </html>

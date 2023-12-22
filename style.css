@@ -1,26 +1,27 @@
-body{
-	text-decoration:none
+body {
+	text-decoration: none;
 	margin: 0;
-	
+
 	header {
-    height: 96px;
-    width: 100%;
-    background-color: aquamarine;
-    
-		nav{
+		height: 96px;
+		width: 100%;
+		background-color: aquamarine;
+
+		nav {
 
 			height: 86px;
+
 			ul {
 				display: flex;
-				flex-wrap: nowrap; 
+				flex-wrap: nowrap;
 				justify-content: space-between;
 				padding: 5px 15px;
 				color: black;
 				list-style-type: none;
-				align-items: center ;
+				align-items: center;
 				margin: 0;
 				height: 100%;
-				
+
 				li {
 					color: black;
 
@@ -36,34 +37,36 @@ body{
 			}
 		}
 	}
-	
-	h1, h2, p{
+
+	h1,
+	h2,
+	p {
 		margin: 0;
 	}
-	
-	// Page d'accueil 
-	
-	.slogan{
+
+	/* Page d'accueil */
+
+	.slogan {
 		padding: 30px 20px 50px;
 	}
-	
-	.main-content{
+
+	.main-content {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		margin-bottom: 20px;
-    
-		.mesCD{
+
+		.mesCD {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap; 
-			max-width: 1200px; 
+			flex-wrap: wrap;
+			max-width: 1200px;
 			justify-content: flex-start;
 			align-items: center;
-			gap:10px;
-			
+			gap: 10px;
 
-			.unCD{
+
+			.unCD {
 				display: inline-flex;
 				flex-direction: column;
 				align-content: center;
@@ -77,38 +80,194 @@ body{
 				max-height: calc(1200px/3);
 				height: calc(1200px/3);
 				padding: 5px;
-				
-				
+
+
 				img {
 					border-radius: 50%;
 					height: 206px;
 				}
-				
-				.chanteur{
+
+				.chanteur {
 					font-size: 1.2em;
 				}
-				
-				.shop{
+
+				.shop {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 					gap: 50px;
 					margin-top: 30px;
 				}
+
+				input {
+					cursor: pointer;
+					padding: 10px;
+					border-radius: 5px;
+				}
 			}
 		}
 	}
-	
-	// Page de description d'un CD sélectionné
-	
-	.monCD{
-		display : flex;
-		flex-direction: column;
-		
+
+	/* Page de description d'un CD sélectionné */
+
+	.monCD {
+		margin-top: 100px;
+		display: inline-flex;
+		flex-direction: row;
+		background-color: #ebe9dd;
+		border: 1px solid black;
+		border-radius: 15px;
+		width: 1500px;
+		height: 600px;
+		padding: 5px;
+
 		img {
+			margin-top: 10%;
+			margin-left: 15%;
 			border-radius: 50%;
-			height: 800px;
+			height: 500px;
+			justify-content: center;
 		}
-		
+
+		.description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 23%;
+			font-size: 50px;
+		}
+
+		input {
+			cursor: pointer;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+		}
+
+	}
+
+	.total-panier {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		input {
+			cursor: pointer;
+			padding: 10px;
+			border-radius: 5px;
+		}
+	}
+
+	.vide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.connexion-admin {
+		padding: 30px 20px 20px;
+	}
+
+	.connexion-btn {
+		text-decoration: none;
+		border: 1px #000 solid;
+		border-radius: 5px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 45%;
+		margin-right: 45%;
+		margin-bottom: 10px;
+	}
+
+	.membre-txt {
+		padding: 30px 20px 50px;
+	}
+
+	.membre-txt-ajout {
+
+		h2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+
+		.form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			border: 1px #000 solid;
+			border-radius: 5px;
+			margin-left: 43%;
+			margin-right: 43%;
+			padding: 10px;
+
+			input {
+				padding: 10px;
+				border-radius: 5px;
+			}
+
+			.ajouter {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.logout {
+		text-decoration: none;
+		border: 1px #000 solid;
+		border-radius: 5px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: 45%;
+		margin-right: 45%;
+		margin-bottom: 10px;
+	}
+
+	.paiement-txt {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10px;
+	}
+
+	.paiement {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: 1px #000 solid;
+		border-radius: 5px;
+		margin-left: 43%;
+		margin-right: 43%;
+		padding: 10px;
+
+		input {
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.paiement-valide {
+			cursor: pointer;
+		}
+
+	}
+
+	.connexion {
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border: 1px #000 solid;
+		border-radius: 5px;
+		margin-top: 10px;
+		margin-left: 43%;
+		margin-right: 43%;
+		padding: 10px;
 	}
 }

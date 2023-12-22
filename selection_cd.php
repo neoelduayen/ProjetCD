@@ -1,13 +1,14 @@
 <?php
 	session_start();
 
-	$bdd = "nelduayen_bd";
-	$host = "lakartxela.iutbayonne.univ-pau.fr";
-	$user = "nelduayen_bd";
-	$pass = "nelduayen_bd";
-	$nomtable = "ProjetCD";
+    $bdd= "nelduayen_bd"; // Base de données
+    $host= "lakartxela.iutbayonne.univ-pau.fr";
+    $user= "nelduayen_bd"; // Utilisateur
+    $pass= "nelduayen_bd"; // mp
+    $nomtable= "ProjetCD"; // Connection bdd
 
-	echo "<head>";
+    echo "<head>";
+    echo "<title>MELOSHOP</title>";
     echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
     echo "</head>";
 
@@ -24,7 +25,7 @@
     echo            "</li>";
 
     echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
-    echo            "<li><a href='' >Panier</a></li>";
+    echo            "<li><a href='panier.php'>Panier</a></li>";
 
     echo        "</ul>";
     echo    "</nav>";
@@ -43,7 +44,7 @@ if (isset($_GET['id'])) {
         $ch4 = $donnees["Genre"];
 		$ch5 = $donnees["Prix"];
         $id = $donnees["ID"];
-
+        echo "<div class='main-content'>";
         echo "<form method='post' action=''>";
         echo    "<input type='hidden' name='action' value='ajouter'>";
         echo    "<input type='hidden' name='id' value='$id'>";
@@ -52,14 +53,13 @@ if (isset($_GET['id'])) {
         echo   		"<img src='$ch1' alt='' />";
         echo 	"</picture>";
 		echo 	"<div class='description'>";
-        echo 		"<p> Titre : </p>";
-        echo 		"<h1><a href='selection_cd.php?id=$id'>$ch2</a></h1>";
+        echo 		"<p> Titre : <B>$ch2</B> </p>";
         echo 		"<p> Auteur : $ch3 </p>";
 		echo 		"<p> Genre : $ch4 </p>";
-		echo    	"<p> Prix : $ch5 € </p>";
-		echo     	"<input type='submit' value='Acheter'>";
+		echo    	"<p> Prix : $ch5 € <input type='submit' value='Acheter'></p>";
 		echo 	"</div>";
 		echo "</div>";
+        echo "</div>";
     } else {
         echo "CD non trouvé";
     }
@@ -70,7 +70,6 @@ if (isset($_GET['id'])) {
 if (isset($_POST['action']) && $_POST['action'] == "ajouter") {
     $id = $_POST['id'];
     array_push($_SESSION['panier'], $id);
-    echo "CD ajouté au panier";
 }
 
 echo "</body>";

@@ -16,7 +16,7 @@ echo                "</a>";
 echo            "</li>";
 
 echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
-echo            "<li><a href='panier.php' >Panier</a></li>";
+echo            "<li><a href='panier.php'>Panier</a></li>";
 
 echo        "</ul>";
 echo    "</nav>";
@@ -55,15 +55,15 @@ function simulerPaiement($numeroCarte, $dateValidite) {
 </head>
 <body>
 
-<h2>Paiement</h2>
-<form method="post" action="traiter_paiement.php">
+<h2 class="paiement-txt">Paiement</h2>
+<form method="post" action="traiter_paiement.php" class="paiement">
     <label for="numero_carte">Numéro de carte :</label>
     <input type="text" name="numero_carte" required maxlength="16"><br>
 
     <label for="date_validite">Date de validité (MM/YY) :</label>
     <input type="text" name="date_validite" required pattern="\d{2}/\d{2}"><br>
 
-    <input type="submit" value="Valider le paiement">
+    <input type="submit" value="Valider le paiement" class="paiement-valide">
 </form>
 
 </body>

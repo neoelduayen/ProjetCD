@@ -1,18 +1,19 @@
 <?php
-    session_start();
+session_start();
 
     
-    if (!isset($_SESSION['panier'])) {
-        $_SESSION['panier'] = array();
-    }
-    
-    $bdd = "nelduayen_bd"; // Base de données
-    $host = "lakartxela.iutbayonne.univ-pau.fr";
-    $user = "nelduayen_bd"; // Utilisateur
-    $pass = "nelduayen_bd"; // Mot de passe
-    $nomtable = "ProjetCD"; /* Table bdd */
+if (!isset($_SESSION['panier'])) {
+    $_SESSION['panier'] = array();
+}
+
+    $bdd= "nelduayen_bd"; // Base de données
+    $host= "lakartxela.iutbayonne.univ-pau.fr";
+    $user= "nelduayen_bd"; // Utilisateur
+    $pass= "nelduayen_bd"; // mp
+    $nomtable= "ProjetCD"; // Connection bdd
     
     echo "<head>";
+    echo "<title>MELOSHOP</title>";
     echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
     echo "</head>";
 
@@ -54,9 +55,9 @@
         echo    "<input type='hidden' name='id' value='$id'>";
 		echo "<div class='unCD'>";
         echo 	"<picture>";
-        echo   		"<img src='$ch1' alt='' />";
+        echo   		"<a href='selection_cd.php?id=$id'><img src='$ch1' alt='' /></a>";
         echo 	"</picture>";
-        echo 	"<h1><a href='selection_cd.php?id=$id'>$ch2</a></h1>";
+        echo 	"<h1>$ch2</h1>";
         echo 	"<p class='chanteur'> $ch3 </p>";
 		echo    	"<div class='shop'>";
 		echo 			"<p> Prix : $ch4 € </p>";
@@ -75,6 +76,8 @@
         array_push($_SESSION['panier'], $id);
         echo "CD ajouté au panier";
     }
+    echo "<h2 class='connexion-admin'>Vous êtes administrateur et souhaiter vous connecter ? C'est par ici !</h2>";
+    echo "<a href='connexion.html' class='connexion-btn'>CONNEXION</a>";
 
     echo "</body>";
 ?>

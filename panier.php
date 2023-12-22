@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-$bdd = "nelduayen_bd"; // Base de données
-$host = "lakartxela.iutbayonne.univ-pau.fr";
-$user = "nelduayen_bd"; // Utilisateur
-$pass = "nelduayen_bd"; // Mot de passe
-$nomtable = "ProjetCD"; /* Table bdd */
+$bdd= "nelduayen_bd"; // Base de données
+$host= "lakartxela.iutbayonne.univ-pau.fr";        
+$user= "nelduayen_bd"; // Utilisateur
+$pass= "nelduayen_bd"; // mp
+$nomtable= "ProjetCD"; // Connection bdd
 
-echo "<head>";
+    echo "<head>";
+    echo "<title>Panier</title>";
     echo    "<link rel='stylesheet' type='text/css' href='style.css' media='screen' />";
     echo "</head>";
 
@@ -24,14 +25,14 @@ echo "<head>";
     echo            "</li>";
 
     echo            "<li><h1>Bienvenue au MELOSHOP</h1></li>";
-    echo            "<li><a href='' >Panier</a></li>";
+    echo            "<li><a href='panier.php'>Panier</a></li>";
 
     echo        "</ul>";
     echo    "</nav>";
     echo "</header>";
 
 if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
-    echo "<h1>Votre Panier</h1>";
+    echo "<h1 class='slogan'>Votre Panier</h1>";
 
     $link = mysqli_connect($host, $user, $pass, $bdd) or die("Impossible de se connecter à la base de données");
 
@@ -40,7 +41,8 @@ if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
     $inClause = implode(',', $panierIds);
     $query = "SELECT * FROM $nomtable WHERE ID IN ($inClause)";
     $result = mysqli_query($link, $query);
-
+    echo "<div class='main-content'>";
+    echo "<div class='mesCd'>";
     $totalPrix = 0;
     while ($donnees = mysqli_fetch_assoc($result)) {
         $id = $donnees["ID"];
@@ -51,8 +53,7 @@ if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
 
         $sousTotal = $prix * $quantite;
         $totalPrix += $sousTotal;
-
-        echo "<div class='cd-panier'>";
+        echo "<div class='unCd'>";
         echo    "<picture>";
         echo        "<img src='$ch1' alt='' />";
         echo    "</picture>";
@@ -67,17 +68,18 @@ if (isset($_SESSION['panier']) && count($_SESSION['panier']) > 0) {
         echo    "</form>";
         echo "</div>";
     }
-
-    echo "<div class='total-panier'>";
-    echo    "<p>Prix total: $totalPrix €</p>";
     echo "</div>";
-
-    echo "<form method='get' action='paiement.php'>";
+    echo "</div>";
+    echo "<div class='total-panier'>";
+    echo    "<h1>Prix total: $totalPrix €</h1>";
+    echo "</div>";
+    
+    echo "<form method='get' action='paiement.php' class='total-panier'>";
     echo    "<input type='submit' value='Aller vers le paiement'>";
     echo "</form>";
 } 
 else {
-    echo "<p>Votre panier est vide.</p>";
+    echo "<h1 class='vide'>Votre panier est vide.</h1>";
 }
 
 if (isset($_POST['action']) && $_POST['action'] == "supprimer") {
