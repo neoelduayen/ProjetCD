@@ -34,7 +34,7 @@ echo "<head>";
     echo "</header>";
 
     $bdd= "projetcd"; // Base de données
-    $host= "localhost";
+    $host= "host.docker.internal";
     $user= "root"; // Utilisateur
     $pass= ""; // mp
     $nomtable= "projetcd"; // Connection bdd

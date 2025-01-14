@@ -9,7 +9,7 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $emp_image = $titre;
 
         $bdd= "projetcd"; // Base de données
-        $host= "localhost";
+        $host= "host.docker.internal";
         $user= "root"; // Utilisateur
         $pass= ""; // mp
         $nomtable= "projetcd"; /* Connection bdd */

@@ -7,7 +7,7 @@ if (!isset($_SESSION['panier'])) {
 }
 
     $bdd= "projetcd";
-    $host= "localhost";
+    $host= "host.docker.internal";
     $user= "root"; // Utilisateur
     $pass= ""; // mp
     $nomtable= "projetcd"; // Connection bdd
