@@ -8,11 +8,11 @@ if ($_POST['Titre'] != $vide && $_POST['Auteur'] != $vide){
         $prix = $_POST['Prix'];
         $emp_image = $titre;
 
-        $bdd= "nelduayen_bd"; // Base de données
-        $host= "lakartxela.iutbayonne.univ-pau.fr";
-        $user= "nelduayen_bd"; // Utilisateur
-        $pass= "nelduayen_bd"; // mp
-        $nomtable= "ProjetCD"; /* Connection bdd */
+        $bdd= "projetcd"; // Base de données
+        $host= "localhost";
+        $user= "root"; // Utilisateur
+        $pass= ""; // mp
+        $nomtable= "projetcd"; /* Connection bdd */
         
         $link=mysqli_connect($host,$user,$pass,$bdd) or die( "Impossible de se connecter à la base de données");
         $query = "SELECT count(id) AS nb FROM $nomtable";

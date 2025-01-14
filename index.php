@@ -6,11 +6,11 @@ if (!isset($_SESSION['panier'])) {
     $_SESSION['panier'] = array();
 }
 
-    $bdd= "ProjetCD";
+    $bdd= "projetcd";
     $host= "localhost";
     $user= "root"; // Utilisateur
     $pass= ""; // mp
-    $nomtable= "ProjetCD"; // Connection bdd
+    $nomtable= "projetcd"; // Connection bdd
     
     echo "<head>";
     echo "<title>MELOSHOP</title>";

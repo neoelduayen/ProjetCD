@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-$bdd= "nelduayen_bd"; // Base de données
-$host= "lakartxela.iutbayonne.univ-pau.fr";        
-$user= "nelduayen_bd"; // Utilisateur
-$pass= "nelduayen_bd"; // mp
-$nomtable= "ProjetCD"; // Connection bdd
+$bdd= "projetcd"; // Base de données
+$host= "localhost";        
+$user= "root"; // Utilisateur
+$pass= ""; // mp
+$nomtable= "projetcd"; // Connection bdd
 
     echo "<head>";
     echo "<title>Panier</title>";
