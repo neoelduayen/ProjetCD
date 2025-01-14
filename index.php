@@ -6,10 +6,10 @@ if (!isset($_SESSION['panier'])) {
     $_SESSION['panier'] = array();
 }
 
-    $bdd= "nelduayen_bd"; // Base de données
-    $host= "lakartxela.iutbayonne.univ-pau.fr";
-    $user= "nelduayen_bd"; // Utilisateur
-    $pass= "nelduayen_bd"; // mp
+    $bdd= "ProjetCD";
+    $host= "localhost";
+    $user= "root"; // Utilisateur
+    $pass= ""; // mp
     $nomtable= "ProjetCD"; // Connection bdd
     
     echo "<head>";
